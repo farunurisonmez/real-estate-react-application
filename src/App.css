@@ -28,6 +28,178 @@
   color: #61dafb;
 }
 
+.bg-custom{
+  background: rgb(29 34 43 / 39%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-area{
+  position: relative;
+}
+.banner-title{
+  color:white;
+  font-size: 50px;
+  /*color: #1a2340;*/
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #eee;
+}
+
+.adverts_wrapper {
+  width: 1100px;
+  margin: 100px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.adverts_wrapper .box {
+  width: calc((100% / 3) - 20px);
+  background-color: white;
+  position: relative;
+}
+
+
+
+.adverts_wrapper .box .top {
+  position: relative;
+  background-color: red;
+}
+
+.adverts_wrapper .box .top:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(43, 187, 175, 0.829);
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.adverts_wrapper .box .top:hover:before {
+  opacity: 1;
+}
+
+.adverts_wrapper .box .top:after {
+  content: "View Property";
+  color: white;
+  font-size: 12px;
+  padding: 10px;
+  border: 1px solid white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.adverts_wrapper .box .top:hover:after {
+  opacity: 1;
+}
+
+.adverts_wrapper .box .top img {
+  width: 100%;
+  margin-bottom: -4px;
+}
+
+.adverts_wrapper .box .top span {
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+.adverts_wrapper .box .top span i {
+  margin-left: 5px;
+}
+
+.adverts_wrapper .box .bottom {
+  padding: 20px 15px;
+  position: relative;
+}
+
+
+
+.adverts_wrapper .box .bottom h3 {
+  font-size: 15px;
+}
+
+.adverts_wrapper .box .bottom > p {
+  margin: 15px 0;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #777;
+}
+
+.adverts_wrapper .box .bottom .advants {
+  display: flex;
+}
+
+.adverts_wrapper .box .bottom .advants > div {
+  margin-right: 15px;
+}
+
+.adverts_wrapper .box .bottom .advants > div > span {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.adverts_wrapper .box .bottom .advants > div > div {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.adverts_wrapper .box .bottom .advants > div > div i {
+  color: #777;
+  font-size: 22px;
+}
+
+.adverts_wrapper .box .bottom .advants > div > div > span {
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.adverts_wrapper .box .bottom .advants > div > div > span > span {
+  color: #777;
+  font-weight: normal;
+  margin-left: 5px;
+}
+
+.adverts_wrapper .box .bottom .price {
+  margin-top: 20px;
+}
+
+.adverts_wrapper .box .bottom .price span:first-of-type {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.adverts_wrapper .box .bottom .price span:last-of-type {
+  color: #3eaba1;
+  font-size: 22px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

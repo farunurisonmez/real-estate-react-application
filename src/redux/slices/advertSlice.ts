@@ -11,13 +11,19 @@ export const advertApi = createApi({
     ),
     tagTypes: ['advertApi'],
     endpoints: (builder) => ({
-        fetchAdvert: builder.query<AdvertModel, void>({
-            query: () => ({
-                url: baseUrl+"/api/Advert",
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            }),
+        fetchAdvert: builder.query<AdvertModel[], { search?: string }>({
+            query: (args) => {
+                const { search } = args;
+                return {
+                    url: baseUrl+"/api/Advert",
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    params: {
+                        search,
+                    },
+                };
+            },
         }),
     }),
 })
